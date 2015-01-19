@@ -1,0 +1,53 @@
+\documentclass{article}
+
+\usepackage[pdfa]{hyperref}
+
+\usepackage{lmodern}			
+\usepackage[T1]{fontenc}		
+\usepackage[utf8]{inputenc}		
+
+\usepackage[a-3b]{pdfx}
+
+\usepackage{filecontents}
+\begin{filecontents*}{\jobname.xmpdata}
+\Keywords{pdfTeX;PDF/X-1a;PDF/A-b} 
+\Title{Sample LaTeX input file} 
+\Author{LaTeX project team} 
+\Org{TeX Users Group} % Publisher
+\Doi{123456789} 
+\Subject{My subject}
+\end{filecontents*}
+
+\usepackage{embedfile}
+\embedfile[
+	id={foo},
+	mimetype={text/html},
+	desc={An attached file}
+	]{foo.html}
+
+
+%%%% WHAT HAVE I TO PUT HERE??? %%%% 
+% \pdfcatalog{%
+% /AF % ???
+% }
+
+\begin{document}
+
+
+Minimal example of a PDF/A-3b with attachments created with LaTeX (pdflatex).
+
+Known problem: \textbf{How to add the /AF entry at pdfcatalog?}
+
+Adobe Preflight information:
+\begin{itemize}
+  \item Embedded file does not have AF entry
+  \item Embedded file has no AFRelationship entry 
+  \item Embedded file present but no UF key
+\end{itemize}
+
+
+May help:
+
+\url{http://tex.stackexchange.com/questions/82796/hyperref-natbib-and-pdf-a-compliance}
+
+\end{document}
