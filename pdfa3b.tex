@@ -50,4 +50,31 @@ May help:
 
 \url{http://tex.stackexchange.com/questions/82796/hyperref-natbib-and-pdf-a-compliance}
 
+
+Outras anotações
+
+% ============================================================
+% Configuracao para PDF/A-3
+% ============================================================
+%
+% -> Se necessário, usar o script fontmap.pl 
+%    para gerar os arquivos de mapeamento de fontes.
+%    Mas apenas se for preciso incorporar todas as fontes ao documento. 
+%    Observar que o primeiro grupo de fontes gerados (que possuem apenas 3
+%    colunas) devem ser removidos. Executar como:
+%
+%    perl fontmap.pl jobname.log >fullembed.map
+%
+% -> É necessário adicionar a opção pdfa ao carregar o hyperref
+%    (\documentclass[pdfa]{abntex2}) para que os links (\ref{}) sejam
+%    anotados corretamente.
+% 
+% -> Informações:
+% http://tex.stackexchange.com/questions/82796/hyperref-natbib-and-pdf-a-compliance
+% https://github.com/bencomp/pdfx-ext/blob/master/sRGBIEC1966-2.1.icm
+% http://support.river-valley.com/wiki/index.php?title=Generating_PDF/A_compliant_PDFs_from_pdftex
+%
+% ============================================================
+
+
 \end{document}
