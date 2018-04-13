@@ -21,6 +21,8 @@
 \usepackage{embedfile}
 \embedfile[
 	id={foo},
+	filespec={foo.html},
+	ucfilespec={foo.html}, % solves the missing /UF key
 	mimetype={text/html},
 	desc={An attached file}
 	]{foo.html}
@@ -41,8 +43,7 @@ Known problem: \textbf{How to add the /AF entry at pdfcatalog?}
 Adobe Preflight information:
 \begin{itemize}
   \item Embedded file does not have AF entry
-  \item Embedded file has no AFRelationship entry 
-  \item Embedded file present but no UF key
+  \item Embedded file has no AFRelationship entry
 \end{itemize}
 
 
